@@ -9,14 +9,14 @@ public class BubbleSort implements Sorted {
 
     @Override
     public int[] sortArray(int[] arrays) {
-        //logger.log(Level.INFO, "Calls the method below");
+        logger.log(Level.INFO, "Calls the method below");
         //consoleHandler.setFormatter();
         return oneIterationSort(arrays);
     }
 
     public static int[] oneIterationSort(int[] search) {
         int temp;
-        //logger.log(Level.INFO, "for loop runs the array");
+        logger.log(Level.INFO, "for loop runs the array");
         for (int i = 0; i < search.length; i++) {
             for (int elememt = 0; elememt < search.length - 1; elememt++) {
                 if (search[elememt] > search[elememt + 1]) {
@@ -26,7 +26,7 @@ public class BubbleSort implements Sorted {
                 }
             }
         }
-        //logger.log(Level.INFO, "This is an info messeage");
+        logger.log(Level.INFO, "This is an info messeage");
         return search;
     }
 

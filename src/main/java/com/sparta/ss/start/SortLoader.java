@@ -27,7 +27,7 @@ public class SortLoader {
         Random rand = new Random();
         int[] randomArray = new int[requiredLength];
         for (int i = 0; i < requiredLength; i++) {
-            randomArray[i] = rand.nextInt(200);
+            randomArray[i] = rand.nextInt();
         }
         return randomArray;
     }

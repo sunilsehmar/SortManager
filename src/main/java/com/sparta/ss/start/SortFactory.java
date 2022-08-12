@@ -18,7 +18,5 @@ public class SortFactory {
                 throw new SorterLoaderException("Invalid Sorter choice: " + number);
         }
     }
-
-
 }
 

@@ -3,7 +3,7 @@ package com.sparta.ss.sorters;
 public class QuickSorter implements Sorted{
     @Override
     public int[] sortArray(int[] arrays) {
-        return quickSort(arrays, arrays[0], arrays.length -1);
+        return quickSort(arrays, 0, arrays.length -1);
     }
 
     public int[] quickSort(int[] arr, int begin, int end) {
