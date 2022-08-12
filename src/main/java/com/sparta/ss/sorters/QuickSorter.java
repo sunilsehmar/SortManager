@@ -1,12 +1,18 @@
 package com.sparta.ss.sorters;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class QuickSorter implements Sorted{
+
+    private static final Logger logger = Logger.getLogger("my logger");
     @Override
     public int[] sortArray(int[] arrays) {
         return quickSort(arrays, 0, arrays.length -1);
     }
 
     public int[] quickSort(int[] arr, int begin, int end) {
+        logger.log(Level.INFO, "sorts the given array");
         if (begin < end) {
             int partitionIndex = partition(arr, begin, end);
             quickSort(arr, begin, partitionIndex-1);
@@ -16,6 +22,7 @@ public class QuickSorter implements Sorted{
     }
 
     private int partition(int arr[], int begin, int end) {
+        logger.log(Level.INFO, "runs through each element, then uses swap to sort the array");
         int pivot = arr[end];
         int i = (begin-1);
         for (int j = begin; j < end; j++) {

@@ -1,6 +1,12 @@
 package com.sparta.ss.sorters;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class MergeSort implements Sorted {
+
+    private static final Logger logger = Logger.getLogger("my logger");
+
 
     @Override
     public int[] sortArray(int[] arrays) {
@@ -9,6 +15,7 @@ public class MergeSort implements Sorted {
     }
 
     public static void mergeSort(int[] a, int number) {
+        logger.log(Level.INFO, "method splits the array using merge sorting");
         // if n is 1
         if (number < 2) {
             return;
@@ -32,6 +39,7 @@ public class MergeSort implements Sorted {
 
     }
     public static void merge( int[] a, int[] l, int[] r, int left, int right) {
+        logger.log(Level.INFO, "method merges the merger sort method");
 
         int i = 0, j = 0, k = 0;
         while (i < left && j < right) {

@@ -3,7 +3,10 @@ package com.sparta.ss.start;
 import com.sparta.ss.exceptions.SorterLoaderException;
 import com.sparta.ss.sorters.*;
 
+import java.util.logging.Logger;
+
 public class SortFactory {
+    private static final Logger logger = Logger.getLogger("my logger");
     public static Sorted getNumber(int number) throws SorterLoaderException{
         switch(number){
             case 1:

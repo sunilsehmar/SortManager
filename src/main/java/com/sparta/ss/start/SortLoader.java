@@ -6,9 +6,12 @@ import com.sparta.ss.sorters.Sorted;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class SortLoader {
     private final static Scanner scanner = new Scanner(System.in);
+    private static final Logger logger = Logger.getLogger("my logger");
+
     public static void start() {
         try {
             DisplayManager.displaySortChoice();
@@ -31,5 +34,4 @@ public class SortLoader {
         }
         return randomArray;
     }
-
 }
